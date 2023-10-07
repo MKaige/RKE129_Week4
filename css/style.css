@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Onest:wght@200&display=swap');
+
+* { /*muudab lehe default seadistused*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(215, 250, 235);
+    overflow: hidden; /*kaotab scrollbari*/
+}
+
+.container{
+    width: 50%;
+    margin: 32px auto;
+}
+
+.header{
+    height: 250px;
+    text-align: center;
+}
+
+.header h1{
+    font-size: 3.5rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+    color: blue;
+    position: relative; /* võimaldab elemendil liikuda:top-right-bottom-left  */
+    animation: header;
+    animation-duration: 3s;
+    animation-fill-mode: forwards; /*animatsioon jääb sinna kuhu määratud */
+    /* animation-iteration-count: infinite; igavene loop*/
+}
+
+@keyframes header {
+    0% {top: -250px} /*animatsiooni algus */
+    100% {top: 100px;}  /*animatsiooni lõpp */
+}
+
+.main{
+    font-family: 'Onest', sans-serif;
+    color: blueviolet;
+    line-height: 1.5;
+}
+
+.text-left{
+    animation: textLeft;
+    animation-duration: 5s;
+    position: relative;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes textLeft {
+    0% {left: -1000px;}
+    85% {left: 50px;}
+    100% {left: 0;}
+}
+
+.text-right{
+    text-align: right;
+    margin-top: 32px;
+    animation: textRight;
+    animation-duration: 5s;
+    position: relative;
+}
+
+@keyframes textRight {
+    0% {right: -1000px;}
+    85% {right: 50px;}
+    100% {right: 0;}
+}
+
+.footer{
+    text-align: center;
+}
+
+.btn{
+    opacity: 0;
+    display: inline-block;
+    margin: 2rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: blueviolet;
+    font-size: 2rem;
+    font-family: 'Onest', sans-serif;
+    text-transform: uppercase;
+    border: 2px solid blue;
+    animation: aniBtn;
+    animation-duration: 5s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes aniBtn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
